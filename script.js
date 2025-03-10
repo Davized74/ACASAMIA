@@ -1,4 +1,4 @@
-import { getFirestore, addDoc, collection, query, orderBy, onSnapshot, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js";
+import { getFirestore, addDoc, collection, query, orderBy, onSnapshot, doc, deleteDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js";
 import { firebaseConfig } from "./firebase-config.js";
 
@@ -81,11 +81,6 @@ async function showBookingList() {
         listEl.appendChild(li);
     });
 }
-
-function deleteBooking(index) {
-    //Questa funzione non è più necessaria, la cancellazione è gestita in showBookingList
-}
-
 
 function backToDashboard() {
     document.getElementById("dashboard-section").style.display = "block";
