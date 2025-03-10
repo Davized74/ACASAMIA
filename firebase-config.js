@@ -1,19 +1,16 @@
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+// firebase-config.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js";
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyC4PB2fkERxVNSkyaBZF5jhhkxRNXjVPHU",
     authDomain: "calendario-prenotazione-79907.firebaseapp.com",
     projectId: "calendario-prenotazione-79907",
-    storageBucket: "calendario-prenotazione-79907.firebasestorage.app",
+    storageBucket: "calendario-prenotazione-79907.firebasestorage.appspot.com", // Corretto il nome del bucket
     messagingSenderId: "578224627791",
-    appId: "1:578224627791:web:32ef09fa71d73802b0ca3a"
-  };
+    appId: "1:578224627791:web:32ef09fa71d73802b0ca3a",
+    measurementId: "G-L3L6397E2G" // Aggiungi il tuo Measurement ID
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
+initializeApp(firebaseConfig);
+export const db = getFirestore();
